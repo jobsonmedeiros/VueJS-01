@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- versão de desenvolvimento, inclui avisos úteis no console  -->
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Página de Teste - Vue</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+    <!--Chama o componente message -->
+    <div id="app">
+        {{ message }}
+    </div>
+
+    <!-- mantenha o atributo title do elemento sempre atualizado em relação à 
+        propriedade message da instância Vue -->
+    <div id="app-2">
+        <span v-bind:title="message">
+            Pare o mouse sobre mim e veja a dica interligada dinamicamente!
+        </span>
+    </div>
+
+    <div id="app-3">
+        <p v-if="seen">Agora você me viu</p>
+    </div>
+
+    <div id="app-4">
+        <ol>
+            <li v-for="todo in todos">
+                {{ todo.text }}
+            </li>
+        </ol>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
